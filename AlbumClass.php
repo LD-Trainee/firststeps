@@ -14,7 +14,7 @@ class AlbumClass extends artistClass
     function ausleihen() : array
     {
         if(empty($this->cover)){
-            echo 'ist null!!';
+            echo 'ist null!!     jaaaaaa';
         }
         return [$this->albumName, $this->cover,$this->artistName,$this->richtung];
     }
