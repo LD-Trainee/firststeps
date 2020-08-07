@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1648492-a18c-48f2-aba0-92c19a00b08c" name="Default Changelist" comment="Init2">
-      <change beforePath="$PROJECT_DIR$/AlbumClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/AlbumClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STEFAN.md" beforeDir="false" afterPath="$PROJECT_DIR$/STEFAN.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1596726153517</updated>
       <workItem from="1596726154754" duration="513000" />
+      <workItem from="1596783832592" duration="30000" />
+      <workItem from="1596783870445" duration="143000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1596726184467</created>
@@ -90,6 +93,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
@@ -101,6 +105,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="198" y="94" key="DiffContextDialog/0.1440.1536.824/2560.-14.2048.1112/0.0.2048.1112@0.0.2048.1112" timestamp="1596726588637" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1596783855194">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/3840.369.1920.1040/1920.11.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596783855194" />
     <state x="533" y="201" key="SettingsEditor" timestamp="1596726322954">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
