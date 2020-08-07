@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  apache:
+    build:
+      context: .
+      dockerfile: docker-config/apache/Dockerfile
+    volumes:
+      - ./:/var/www/html:cached
+      - ./docker-config/apache/php-extra.ini:/usr/local/etc/php/conf.d/php-extra.ini
+    ports:
+      - "80:80"
