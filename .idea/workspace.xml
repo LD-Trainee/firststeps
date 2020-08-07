@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a1648492-a18c-48f2-aba0-92c19a00b08c" name="Default Changelist" comment="Init2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STEFAN.md" beforeDir="false" afterPath="$PROJECT_DIR$/STEFAN.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP_XAMPP" />
+  <component name="ProjectId" id="1fjKe2t0m75ZstuJozifVk8eTRp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\firststeps" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1648492-a18c-48f2-aba0-92c19a00b08c" name="Default Changelist" comment="" />
+      <created>1596726153517</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596726153517</updated>
+      <workItem from="1596726154754" duration="513000" />
+      <workItem from="1596783832592" duration="30000" />
+      <workItem from="1596783870445" duration="143000" />
+    </task>
+    <task id="LOCAL-00001" summary="Init">
+      <created>1596726184467</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596726184467</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Init2">
+      <created>1596726574500</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596726574500</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init" />
+    <MESSAGE value="Init2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="198" y="94" key="DiffContextDialog" timestamp="1596726588637">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="198" y="94" key="DiffContextDialog/0.1440.1536.824/2560.-14.2048.1112/0.0.2048.1112@0.0.2048.1112" timestamp="1596726588637" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1596783855194">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/3840.369.1920.1040/1920.11.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596783855194" />
+    <state x="533" y="201" key="SettingsEditor" timestamp="1596726322954">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="533" y="201" key="SettingsEditor/0.1440.1536.824/2560.-14.2048.1112/0.0.2048.1112@0.0.2048.1112" timestamp="1596726322954" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1596726600563">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.1440.1536.824/2560.-14.2048.1112/0.0.2048.1112@0.0.2048.1112" timestamp="1596726600563" />
+  </component>
+</project>
