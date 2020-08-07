@@ -13,6 +13,7 @@ echo 'Und das bei der Musikrichtung '.$get[3].', das geht doch nicht!<br/>';
 echo 'was hat sich  '.$get[2].' wohl dabei gedacht<br/>';
 echo 'Selbst der Name ist schon kritisch. '.$get[0].' !<br/>';
 ?>
+
 <br/>
 <a href="aufrufMukke.php">Bring me another!!!</a>
 
