@@ -18,6 +18,7 @@ class LuckyController extends AbstractController
         var_dump($page);
         return $this->render('lucky/number.html.twig', [
             'number' => $number,
+            'page' => $page,
         ]);
     }
 
