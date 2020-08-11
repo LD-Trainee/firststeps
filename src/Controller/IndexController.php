@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\BrowserKit\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
@@ -12,10 +14,14 @@ class IndexController extends AbstractController
      */
     public function index()
     {
+
         $symfony = "Syfony ist das coolste Framework der Welt!";
+
+//        return new Response('', Response::HTTP_I_AM_A_TEAPOT);
+
         return $this->render('index/index.html.twig', [
             'controller_name' => 'World',
-            'lob' => $symfony
+            'title' => $symfony
         ]);
     }
 }

@@ -10,15 +10,17 @@ use Symfony\Component\Routing\Annotation\Route;
 class LuckyController extends AbstractController
 {
      /**
-      * @Route("/blog/{page}", name="blog_list", requirements={"page"="\d+"})
+      * @Route("/blog/{_locale}/{page}", name="blog_list", requirements={"page"="\d+", "_locale": "en|de"}, defaults={"title": "Hello world!"})
       */
-    public function number(int $page)
+    public function number(int $page,string $title)
     {
         $number = random_int(0, 100);
         var_dump($page);
+        return $this->redirect('http://google.com/');
         return $this->render('lucky/number.html.twig', [
             'number' => $number,
             'page' => $page,
+            'title' => $title
         ]);
     }
 
