@@ -4,16 +4,7 @@
     <expand>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
     <select>
@@ -26,15 +17,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1648492-a18c-48f2-aba0-92c19a00b08c" name="Default Changelist" comment="Seite wird aquch mit ausgegeben">
+    <list default="true" id="a1648492-a18c-48f2-aba0-92c19a00b08c" name="Default Changelist" comment="neuer controller1">
+      <change afterPath="$PROJECT_DIR$/src/Controller/RechnerMinusController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/MinusFormType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rechner_start/minus.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LuckyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LuckyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/lucky/number.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lucky/number.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RechnerStartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RechnerStartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RechnerFormType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rechner_start/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rechner_start/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +45,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP_XAMPP">
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="b249b11c-9d87-48e1-b51a-c1d255a5c183" name="localhost" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/html" />
+          <mapping local-root="$PROJECT_DIR$/public" remote-root="/var/www/html/public" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
@@ -164,16 +166,20 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1fjKe2t0m75ZstuJozifVk8eTRp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -192,7 +198,11 @@
       <workItem from="1596783832592" duration="30000" />
       <workItem from="1596783870445" duration="143000" />
       <workItem from="1597048587244" duration="3734000" />
-      <workItem from="1597127372292" duration="11610000" />
+      <workItem from="1597127372292" duration="14076000" />
+      <workItem from="1597211521677" duration="1926000" />
+      <workItem from="1597214765540" duration="6148000" />
+      <workItem from="1597300002494" duration="18044000" />
+      <workItem from="1597326443228" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1596726184467</created>
@@ -215,7 +225,28 @@
       <option name="project" value="LOCAL" />
       <updated>1597053878605</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="redirect zu google und veränderter link ^^">
+      <created>1597148221825</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597148221825</updated>
+    </task>
+    <task id="LOCAL-00005" summary="neuer controller">
+      <created>1597221421717</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597221421717</updated>
+    </task>
+    <task id="LOCAL-00006" summary="neuer controller1">
+      <created>1597222545416</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597222545416</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,20 +292,24 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Init" />
     <MESSAGE value="Init2" />
     <MESSAGE value="Seite wird aquch mit ausgegeben" />
-    <option name="LAST_COMMIT_MESSAGE" value="Seite wird aquch mit ausgegeben" />
+    <MESSAGE value="redirect zu google und veränderter link ^^" />
+    <MESSAGE value="neuer controller" />
+    <MESSAGE value="neuer controller1" />
+    <option name="LAST_COMMIT_MESSAGE" value="neuer controller1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3349" y="363" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597137442666">
       <screen x="2560" y="0" width="2048" height="1122" />
     </state>
     <state x="3349" y="363" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597137442666" />
-    <state x="3315" y="316" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597143725526">
+    <state x="3315" y="316" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597317930909">
       <screen x="2560" y="0" width="2048" height="1122" />
     </state>
-    <state x="3315" y="316" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597143725526" />
+    <state x="3315" y="316" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597317930909" />
     <state width="228" height="442" key="Diff.GoToChangePopup" timestamp="1597049303240">
       <screen x="2560" y="0" width="2048" height="1122" />
     </state>
@@ -289,26 +324,95 @@
     </state>
     <state x="3349" y="296" key="FileChooserDialogImpl/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597049393189" />
     <state x="740" y="274" key="FileChooserDialogImpl/3840.369.1920.1040/1920.11.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596783855194" />
-    <state x="533" y="201" key="SettingsEditor" timestamp="1596726322954">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state x="533" y="201" key="SettingsEditor/0.1440.1536.824/2560.-14.2048.1112/0.0.2048.1112@0.0.2048.1112" timestamp="1596726322954" />
-    <state x="3177" y="292" key="Vcs.Push.Dialog.v2" timestamp="1597053911718">
+    <state width="1002" height="380" key="GridCell.Tab.0.bottom" timestamp="1597323630723">
       <screen x="2560" y="0" width="2048" height="1122" />
     </state>
-    <state x="3177" y="292" key="Vcs.Push.Dialog.v2/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597053911718" />
+    <state width="1002" height="380" key="GridCell.Tab.0.bottom/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630723" />
+    <state width="1002" height="380" key="GridCell.Tab.0.center" timestamp="1597323630723">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state width="1002" height="380" key="GridCell.Tab.0.center/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630723" />
+    <state width="1002" height="380" key="GridCell.Tab.0.left" timestamp="1597323630723">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state width="1002" height="380" key="GridCell.Tab.0.left/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630723" />
+    <state width="1002" height="380" key="GridCell.Tab.0.right" timestamp="1597323630723">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state width="1002" height="380" key="GridCell.Tab.0.right/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630723" />
+    <state width="1002" height="380" key="GridCell.Tab.1.bottom" timestamp="1597323630724">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state width="1002" height="380" key="GridCell.Tab.1.bottom/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630724" />
+    <state width="1002" height="380" key="GridCell.Tab.1.center" timestamp="1597323630724">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state width="1002" height="380" key="GridCell.Tab.1.center/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630724" />
+    <state width="1002" height="380" key="GridCell.Tab.1.left" timestamp="1597323630724">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state width="1002" height="380" key="GridCell.Tab.1.left/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630724" />
+    <state width="1002" height="380" key="GridCell.Tab.1.right" timestamp="1597323630724">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state width="1002" height="380" key="GridCell.Tab.1.right/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630724" />
+    <state width="1002" height="380" key="GridCell.Tab.2.bottom" timestamp="1597323630724">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state width="1002" height="380" key="GridCell.Tab.2.bottom/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630724" />
+    <state width="1002" height="380" key="GridCell.Tab.2.center" timestamp="1597323630724">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state width="1002" height="380" key="GridCell.Tab.2.center/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630724" />
+    <state width="1002" height="380" key="GridCell.Tab.2.left" timestamp="1597323630724">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state width="1002" height="380" key="GridCell.Tab.2.left/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630724" />
+    <state width="1002" height="380" key="GridCell.Tab.2.right" timestamp="1597323630724">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state width="1002" height="380" key="GridCell.Tab.2.right/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597323630724" />
+    <state x="3392" y="284" key="NewPhpClassDialog" timestamp="1597311794079">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state x="3392" y="284" key="NewPhpClassDialog/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597311794079" />
+    <state x="2966" y="252" key="SettingsEditor" timestamp="1597326687691">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state x="2966" y="252" key="SettingsEditor/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597326687691" />
+    <state x="533" y="201" key="SettingsEditor/0.1440.1536.824/2560.-14.2048.1112/0.0.2048.1112@0.0.2048.1112" timestamp="1596726322954" />
+    <state x="3177" y="292" key="Vcs.Push.Dialog.v2" timestamp="1597222562286">
+      <screen x="2560" y="0" width="2048" height="1122" />
+    </state>
+    <state x="3177" y="292" key="Vcs.Push.Dialog.v2/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597222562286" />
     <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.1440.1536.824/2560.-14.2048.1112/0.0.2048.1112@0.0.2048.1112" timestamp="1596726600563" />
     <state x="904" y="347" key="VcsDiffUtil.ChangesDialog" timestamp="1597049339835">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
     <state x="904" y="347" key="VcsDiffUtil.ChangesDialog/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597049339835" />
-    <state x="3402" y="475" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597136414426">
+    <state x="3402" y="475" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597326359411">
       <screen x="2560" y="0" width="2048" height="1122" />
     </state>
-    <state x="3402" y="475" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597136414426" />
+    <state x="3402" y="475" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597326359411" />
     <state x="3241" y="261" key="run.anything.popup" timestamp="1597138220584">
       <screen x="2560" y="0" width="2048" height="1122" />
     </state>
     <state x="3241" y="261" key="run.anything.popup/-1920.0.1536.834/0.0.2048.1122/2560.0.2048.1122@2560.0.2048.1122" timestamp="1597138220584" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/RechnerMinusController.php</url>
+          <line>22</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="index.php">
+        <watch expression="$form-&gt;get('Minus')" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

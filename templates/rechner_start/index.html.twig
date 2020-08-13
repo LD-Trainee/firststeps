@@ -3,11 +3,12 @@
 {% block body %}
     <h1>gib eine Zahl ein!</h1>
     <br/>
-    {{ form_start(rechnerForm) }}
-    {{ form_widget(rechnerForm) }}
-
-    <button type="submit" class="btn btn-primary">SooS</button>
-    <button type="submit" class="btn btn-primary">ShaaSh</button>
-    <br/>
-    {{ form_end(rechnerForm) }}
+    <form action="{{ path('rechner_start') }}" enctype="multipart/form-data" method="post">
+        {{ form_row(form.zahl) }}
+        {{ form_row(form.Minus) }}
+        {{ form_row(form.Plus) }}
+        {{ form_row(form.GO) }}
+        {{ form_row(form.AAA) }}
+        {{ form_row(form._token) }}
+    </form>
 {% endblock %}

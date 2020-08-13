@@ -27,13 +27,5 @@ class LuckyController extends AbstractController
         ]);
     }
 
-    public function list(int $page)
-    {
-        var_dump($page);
-    }
 
-    public function show(int $slug)
-    {
-        var_dump($slug);
-    }
 }
