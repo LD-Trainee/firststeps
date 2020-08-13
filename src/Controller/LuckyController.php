@@ -18,6 +18,8 @@ class LuckyController extends AbstractController
         $number = random_int(0, 100);
         $logger->info($page);
         // return $this->redirect('http://youtube.com/');
+        var_dump($page);
+        //return $this->redirect('http://google.com/');
         return $this->render('lucky/number.html.twig', [
             'number' => $number,
             'page' => $page,

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>gib eine Zahl ein!</h1>
+    <br/>
+    {{ form_start(rechnerForm) }}
+    {{ form_widget(rechnerForm) }}
+
+    <button type="submit" class="btn btn-primary">SooS</button>
+    <button type="submit" class="btn btn-primary">ShaaSh</button>
+    <br/>
+    {{ form_end(rechnerForm) }}
+{% endblock %}

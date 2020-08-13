@@ -19,8 +19,8 @@ class BrandNewController extends AbstractController
         ]);
     }
 
-    public function show(string $text)
-    {
-        var_dump($text);
-    }
+    //public function show(string $text)
+    //{
+    //    var_dump($text);
+    //}
 }
