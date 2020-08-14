@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+;
+
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\BrowserKit\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,7 +15,7 @@ class IndexController extends AbstractController
     /**
      * @Route("/index", name="index")
      */
-    public function index()
+    public function index(Request $request)
     {
 
         $symfony = "Syfony ist das coolste Framework der Welt!";
