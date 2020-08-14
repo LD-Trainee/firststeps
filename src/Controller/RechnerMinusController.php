@@ -16,18 +16,12 @@ use App\Form\MinusFormType;
 class RechnerMinusController extends AbstractController
 {
     /**
-     * @Route("/rechner/minus", name="rechner_minus")
+     * @Route("/rechner/minus/{zahl}", name="rechner_minus")
      */
-    public function Action(Request $request)
+    public function Action(int $zahl)
     {
         $form = $this->createForm(MinusFormType::class);
-        $request = Request::createFromGlobals();
-        $zahl = $request->query->get('zahl');
-
-
-
-
-
+        //$request = Request::createFromGlobals();
         return $this->render('rechner_start/minus.html.twig', [
             'zahl' => $zahl,
             'form' => $form->createView()

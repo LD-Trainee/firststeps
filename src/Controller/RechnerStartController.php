@@ -25,12 +25,12 @@ class RechnerStartController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             // ... perform some action, such as saving the task to the database
-
-            if($form->get('AAA')->getData())
+            $zahl = $request ->query->get('zahl');
+            if($form->get('attending')->getData())
             {
-                return $this->redirectToRoute('/rechner/minus/');
+                return $this->redirectToRoute('rechner_minus', ['zahl' => $zahl]);
             }
-                return $this->redirectToRoute('/rechner/minus/');
+                return $this->redirectToRoute('rechner_minus', ['zahl' => $zahl]);
         }
 
         return $this->render('rechner_start/index.html.twig', [
