@@ -16,6 +16,7 @@ class Minus
      * @ORM\Column(type="integer")
      */
     private $id;
+    private $feld;
 
     /**
      * @ORM\Column(type="decimal", precision=10, scale=0, nullable=true)
@@ -57,6 +58,13 @@ class Minus
         $this->attending = $attending;
     }
 
+    public function getFeld(){
+        return $this->feld;
+    }
+
+    public function setFeld($gg){
+        $this->feld = $gg;
+    }
 
 
 }

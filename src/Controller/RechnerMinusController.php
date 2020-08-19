@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Minus;
 use App\Entity\Rechner;
 use App\Form\RechnerFormType;
 use ContainerXj8pkaf\getRechnerStartControllerService;
@@ -20,15 +21,22 @@ class RechnerMinusController extends AbstractController
      */
     public function Action(int $zahl, Request $request)
     {
+
         $form = $this->createForm(MinusFormType::class);
+
+        {
+        $TempMinusEntity = new Minus();
+        $TempMinusEntity->setFeld($request->query->get('zahl'));
+        $form->setData($TempMinusEntity);
+    }
         $form->handleRequest($request);
         $zahlminus = $form->get('zahlminus')->getData();
         if ($form->isSubmitted() && $form->isValid()) {
             $ergebnis = $zahl - $zahlminus;
 
-            // ... perform some action, such as saving the task to the database
-            $zahl = $form->get('zahl')->getData();
-            $ergebnis = $zahl - $zahlminus;
+            $zahl = $form->get('feld')->getData();
+            //$zahl = $request->query->get('zahl');
+            $ergebnis = (int)$zahlminus - (int)$zahl;
                 return $this->redirectToRoute('rechner_start', ['ergebnis' => $ergebnis]);
             }
 

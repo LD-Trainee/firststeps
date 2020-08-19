@@ -6,6 +6,7 @@ use App\Entity\Minus;
 use Doctrine\DBAL\Types\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -16,7 +17,8 @@ class MinusFormType extends AbstractType
     {
 
         $builder
-            ->add('zahlminus', TextType::class)
+            ->add('zahlminus')
+            ->add('feld', HiddenType::class)
             ->add('GO', SubmitType::class)
             ->add('attending', ChoiceType::class, [
         'choices'  => [
