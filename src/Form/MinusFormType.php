@@ -3,7 +3,9 @@
 namespace App\Form;
 
 use App\Entity\Minus;
+use Doctrine\DBAL\Types\TextType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -12,9 +14,16 @@ class MinusFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
         $builder
-            ->add('zahlminus')
-            ->add('GO', SubmitType::class);
+            ->add('zahlminus', TextType::class)
+            ->add('GO', SubmitType::class)
+            ->add('attending', ChoiceType::class, [
+        'choices'  => [
+            'Nope' => false,
+            'Yes' => true,
+        ],
+    ]);
         ;
 
     }
@@ -25,4 +34,6 @@ class MinusFormType extends AbstractType
             'data_class' => Minus::class,
         ]);
     }
+
+
 }

@@ -27,6 +27,8 @@ class Minus
         return $this->id;
     }
 
+    private $attending;
+
     public function getZahlminus(): ?string
     {
         return $this->zahlminus;
@@ -38,4 +40,23 @@ class Minus
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAttending()
+    {
+        return $this->attending;
+    }
+
+    /**
+     * @param mixed $attending
+     */
+    public function setAttending($attending)
+    {
+        $this->attending = $attending;
+    }
+
+
+
 }
