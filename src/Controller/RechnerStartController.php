@@ -36,7 +36,7 @@ class RechnerStartController extends AbstractController
             // ... perform some action, such as saving the task to the database
             $zahl = $form->get('zahl')->getData();
 
-            if($form->get('attending')->getData())
+            if($form->get('Rechenart')->getData())
             {
                 return $this->redirectToRoute('rechner_plus', ['zahl' => $zahl]);
             }

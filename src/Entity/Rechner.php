@@ -47,7 +47,7 @@ class Rechner
     /**
      * @return mixed
      */
-    public function getAttending()
+    public function getRechenart()
     {
         return $this->attending;
     }
@@ -55,7 +55,7 @@ class Rechner
     /**
      * @param mixed $attending
      */
-    public function setAttending($attending): void
+    public function setRechenart($attending): void
     {
         $this->attending = $attending;
     }

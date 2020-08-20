@@ -32,12 +32,12 @@ class RechnerMinusController extends AbstractController
         $form->handleRequest($request);
         $zahlminus = $form->get('zahlminus')->getData();
         if ($form->isSubmitted() && $form->isValid()) {
-            $ergebnis = $zahl - $zahlminus;
+            $minusergebnis = $zahl - $zahlminus;
 
             $zahl = $form->get('feld')->getData();
             //$zahl = $request->query->get('zahl');
             $ergebnis = (int)$zahlminus - (int)$zahl;
-                return $this->redirectToRoute('rechner_start', ['ergebnis' => $ergebnis]);
+                return $this->redirectToRoute('rechner_start', ['ergebnis' => $minusergebnis]);
             }
 
         //$request = Request::createFromGlobals();

@@ -1,10 +1,11 @@
 {% extends 'base.html.twig' %}
 
-
 {% block body %}
     <div class="rechnerbox">
-    <h1>gib eine Zahl ein!</h1>
+    <p>du hast {{ zahl }} eingegeben</p>
+    <h1>gib noch eine Zahl ein!</h1>
+
     <br/>
-        {{ form(form) }}
+    {{ form(form) }}
     </div>
 {% endblock %}

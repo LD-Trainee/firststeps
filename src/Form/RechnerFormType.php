@@ -29,15 +29,14 @@ class RechnerFormType extends AbstractType implements FormTypeInterface
         if(!isset($ergebnis)){$this->ergebnis = 0;}
         $atr = [$this->ergebnis];
         $builder
-            ->add('zahl', TextareaType::class, ['attr' => $atr])
-            ->add('GO', SubmitType::class)
-            ->add('attending', ChoiceType::class, [
+            ->add('zahl', TextareaType::class, ['attr' => $atr, 'label' => false])
+            ->add('Rechenart', ChoiceType::class, [ 'label' => false,
                 'choices'  => [
                     'Minus' => false,
                     'Plus' => true,
                 ],
             ]);
-        ;
+            $builder->add('Los',  SubmitType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)

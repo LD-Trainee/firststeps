@@ -1,10 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <div class="rechnerbox">
     <p>du hast {{ zahl }} eingegeben</p>
     <h1>gib noch eine Zahl ein!</h1>
 
     <br/>
     {{ form(form) }}
-
+     <!--  {{ dump(form.zahlminus.vars.id) }} -->
+    </div>
 {% endblock %}

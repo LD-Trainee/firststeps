@@ -1,0 +1,87 @@
+.rechnerbox
+{
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 10%;
+    border-style: solid;
+    width: 50%;
+}
+
+body
+{
+    background-color: #ffffff;
+}
+
+h1
+{
+    text-align: center;
+    color: black;
+    background: #ffffff;
+}
+
+#rechner_form_zahl
+{
+    background-color: #fbf1a9;
+    resize: none;
+    padding: 10% 20%;
+}
+
+#minus_form_Los
+{
+    background-color: #fbf1a9;
+    resize: none;
+    padding: 1% 2%;
+    margin-top: 1%;
+
+}
+
+#rechner_form_Rechenart
+{
+    margin-top: 1%;
+    background-color: #fbf1a9;
+}
+
+#rechner_form_Los
+{
+    background-color: #fbf1a9;
+    padding: 1% 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+p
+{
+    color: black;
+}
+
+#plus_form_Los
+{
+    background-color: #fbf1a9;
+    resize: none;
+    padding: 1% 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#minus_form_zahlminus
+{
+    background-color: #fbf1a9;
+    resize: none;
+    padding: 10% 20%;
+}
+
+#plus_form_zahlplus
+{
+    background-color: #fbf1a9;
+    resize: none;
+    padding: 10% 20%;
+}
+
+#minus_form_Los
+{
+    background-color: #fbf1a9;
+    resize: none;
+    padding: 1% 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}

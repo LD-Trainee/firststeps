@@ -22,7 +22,7 @@ class IndexController extends AbstractController
 
 //        return new Response('', Response::HTTP_I_AM_A_TEAPOT);
 
-        return $this->render('index/index.html.twig', [
+        return $this->render('index/plus.html.twig', [
             'controller_name' => 'World',
             'title' => $symfony
         ]);
