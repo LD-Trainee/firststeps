@@ -1,0 +1,17 @@
+
+
+<head>
+    <meta charset="UTF-8">
+    {% block title %}{% endblock %}
+    <link href="{{ asset('./Rechner.css') }}" rel="stylesheet"/>
+
+    {% block javascripts %}<script src="{{ asset('./Test.js') }}"></script>{% endblock %}
+</head>
+
+
+{% block body %}
+<div class="stanni">
+    <button type="button" id="Button1">Daas Button</button>
+    <div id="textfeld">ROFL</div>
+</div>
+{% endblock %}

@@ -36,6 +36,7 @@ class RechnerFormType extends AbstractType implements FormTypeInterface
                     'Plus' => true,
                 ],
             ]);
+            $builder->add('Calc', ButtonType::class);
             $builder->add('Los',  SubmitType::class);
     }
 
