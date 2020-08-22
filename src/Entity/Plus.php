@@ -37,24 +37,24 @@ class Plus
         return $this->id;
     }
 
-    public function getZahlPlus(): ?int
+    public function getZahlPlus(): ?float
     {
         return $this->zahlPlus;
     }
 
-    public function setZahlPlus(?int $zahlPlus): self
+    public function setZahlPlus(?float $zahlPlus): self
     {
         $this->zahlPlus = $zahlPlus;
 
         return $this;
     }
 
-    public function getFeldPlus(): ?int
+    public function getFeldPlus(): ?float
     {
         return $this->feld;
     }
 
-    public function setFeldPlus(?int $feld): self
+    public function setFeldPlus(?float $feld): self
     {
         $this->feld = $feld;
 

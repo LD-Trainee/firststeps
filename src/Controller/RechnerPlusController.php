@@ -18,7 +18,7 @@ class RechnerPlusController extends AbstractController
     /**
      * @Route("/rechner/plus/{zahl}", name="rechner_plus")
      */
-    public function Action(int $zahl, Request $request)
+    public function Action(float $zahl, Request $request)
     {
 
         $form = $this->createForm(PlusFormType::class);
@@ -35,7 +35,7 @@ class RechnerPlusController extends AbstractController
 
             $zahl = $form->get('feldPlus')->getData();
             //$zahl = $request->query->get('zahl');
-            $ergebnis = (int)$zahlplus - (int)$zahl;
+            $ergebnis = $zahlplus - $zahl;
             return $this->redirectToRoute('rechner_start', ['ergebnis' => $Plusergebnis]);
         }
 

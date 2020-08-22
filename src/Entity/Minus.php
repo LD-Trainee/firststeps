@@ -30,12 +30,12 @@ class Minus
 
     private $attending;
 
-    public function getZahlminus(): ?string
+    public function getZahlminus(): ?float
     {
         return $this->zahlminus;
     }
 
-    public function setZahlminus(?string $zahlminus): self
+    public function setZahlminus(?float $zahlminus): self
     {
         $this->zahlminus = $zahlminus;
 

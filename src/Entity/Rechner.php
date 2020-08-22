@@ -32,12 +32,12 @@ class Rechner
         return $this->id;
     }
 
-    public function getZahl(): ?int
+    public function getZahl(): ?float
     {
         return $this->zahl;
     }
 
-    public function setZahl(?string $zahl): self
+    public function setZahl(?float $zahl): self
     {
         $this->zahl = $zahl;
 
