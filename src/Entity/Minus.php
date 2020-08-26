@@ -16,10 +16,15 @@ class Minus
      * @ORM\Column(type="integer")
      */
     private $id;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+
     private $feld;
 
     /**
-     * @ORM\Column(type="decimal", precision=10, scale=0, nullable=true)
+     * @ORM\Column(type="float", nullable=true)
      */
     private $zahlminus;
 
@@ -30,10 +35,18 @@ class Minus
 
     private $attending;
 
+    /**
+     * @return float
+     */
+
     public function getZahlminus(): ?float
     {
         return $this->zahlminus;
     }
+
+    /**
+     * @param float $zahlminus
+     */
 
     public function setZahlminus(?float $zahlminus): self
     {
@@ -58,11 +71,20 @@ class Minus
         $this->attending = $attending;
     }
 
-    public function getFeld(){
+    /**
+     * @return float
+     */
+
+    public function getFeld(): ?float
+    {
         return $this->feld;
     }
 
-    public function setFeld($gg){
+    /**
+     * @param float $gg
+     */
+
+    public function setFeld(?float $gg){
         $this->feld = $gg;
     }
 

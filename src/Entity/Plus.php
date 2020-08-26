@@ -18,12 +18,12 @@ class Plus
     private $id;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="float", nullable=true)
      */
     private $zahlPlus;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="float", nullable=true)
      */
     private $feldPlus;
 
@@ -51,7 +51,7 @@ class Plus
 
     public function getFeldPlus(): ?float
     {
-        return $this->feld;
+        return $this->feldPlus;
     }
 
     public function setFeldPlus(?float $feld): self

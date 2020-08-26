@@ -19,7 +19,7 @@ class RechnerMinusController extends AbstractController
     /**
      * @Route("/rechner/minus/{zahl}", name="rechner_minus")
      */
-    public function Action(int $zahl, Request $request)
+    public function Action(float $zahl, Request $request)
     {
 
         $form = $this->createForm(MinusFormType::class);
