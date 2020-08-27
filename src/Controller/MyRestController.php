@@ -5,22 +5,69 @@ namespace App\Controller;
 use App\Entity\Rest;
 use App\Form\RestFormType;
 use http\Client;
+use Nelmio\ApiDocBundle\Annotation\Security;
 use phpDocumentor\Reflection\Types\Object_;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse as Response;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
+use Nelmio\ApiDocBundle\Annotation\Model;
+use Swagger\Annotations as SWG;
 
 class MyRestController extends AbstractController
 {
+    /**
+     * @var bool
+     * @SWG\Property (type="boolean", description="true = Angaben zum generieren der Zufallszahl invalid")
+     */
+
     private $spasst = false;
     /**
      * @Route("/api/v1/random/", name="my_rest_api", methods={"GET"})
+     * @SWG\Get  (
+     *     path="/api/v1/random",
+     *     operationId="generateNumber",
+     *     summary="generiert eine Zufallszahl mithilfe der eingabewerte min, max",
+     *     method="GET",
+     * @SWG\Response (
+     *      response=200,
+     *      description="Returns the Random Generated number",
+     *      @SWG\Parameter
+     *      (
+     *          name="randomName",
+     *          in="query",
+     *          type="Integer",
+     *          description="randomNumber ausgeben"
+     *      ),
+     * ),
+     *      @SWG\Tag(name="randomNumber")
+     * ),
      */
-    public function IHSOY(Request $Req): object
+
+    public function IHSEY(Request $Req): object
     {
-        if($Req->get('max') > $Req->get('min')) {
+        /**
+         * @SWG\Property(
+         *     in="path",
+         *     required="true",
+         *     type="int",
+         *     description="Minimum"
+         * )
+         *
+         */
+        $max = $Req->get('max');
+
+        /**
+         * @SWG\Property(
+         *     in="path",
+         *     required="true",
+         *     type="int",
+         *     description="Maximum"
+         * )
+         */
+        $min = $Req->get('min');
+        if( $max > $min) {
             $randomNumber = random_int($Req->get('min'), $Req->get('max'));
         } else {
             $randomNumber = 'Du schlawiner du';

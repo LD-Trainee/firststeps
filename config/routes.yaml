@@ -4,3 +4,14 @@
 app_lucky_number:
   path: /lucky/number
   controller: App\Controller\LuckyController::number
+
+app.swagger_ui:
+  path: /api/doc
+  methods: GET
+  defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
+
+app.swagger:
+  path: /api/doc.json
+  methods: GET
+  defaults: { _controller: nelmio_api_doc.controller.swagger }
+
