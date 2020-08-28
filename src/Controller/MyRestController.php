@@ -7,6 +7,7 @@ use App\Form\RestFormType;
 use http\Client;
 use Nelmio\ApiDocBundle\Annotation\Security;
 use phpDocumentor\Reflection\Types\Object_;
+use stdClass;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,31 +24,52 @@ class MyRestController extends AbstractController
      */
 
     private $Vogel = false;
-    /**
-     * @Route("/api/v1/random/", name="my_rest_api", methods={"GET"})
-     * @SWG\Get  (
-     *      path="/api/v1/random",
-     *      operationId="generateNumber",
-     *      summary="generiert eine Zufallszahl mithilfe der eingabewerte min, max",
-     *      method="GET",
-     *      @SWG\Response (
-     *      response=200,
-     *      description="Returns the Random Generated number",
-     *      @SWG\Parameter
-     *      (
-     *          name="randomName",
-     *          in="query",
-     *          type="Integer",
-     *          description="randomNumber ausgeben"
-     *      ),
-     * ),
-     *      @SWG\Tag(name="randomNumber")
-     * ),
-     */
+        /**
+         * @Route("/api/v1/random/", name="my_rest_api", methods={"POST"})
+         *
+         *
+         *
+         * @SWG\Response(
+         *     response=200,
+         *     description="Json mit var data",
+         *     @SWG\Schema(
+         *        type="object",
+         *        example={"data": "42"}
+         *     )
+         * )
+         *
+         * @SWG\Parameter(
+         *     name="params",
+         *     in="body",
+         *     type="json",
+         *     description="json mit min und max als inhalt",
+         *     @SWG\Schema(
+         *        type="object",
+         *        example={"min": "41", "max": "43"}
+         *     )
+         * )
+         */
 
-    public function IHSEY(Request $request): object
+    public function apiGetRandomNumber(Request $request): object
     {
-        $contentType = $request->headers->get('Content-Type');
+        /** @var stdClass $data */
+
+
+        if($request->getContent() !== "")
+        {
+            $data = json_decode($request->getContent());
+        } else {
+            $errorResponse = new Response();
+            $errorResponse->setContent(json_encode([
+                'data' => 'error: no json file in request'
+                ]
+            ));
+            $errorResponse->setStatusCode(Response::HTTP_I_AM_A_TEAPOT);
+            return $errorResponse;
+        }
+
+
+
 
         /**
          * @SWG\Property(
@@ -58,7 +80,7 @@ class MyRestController extends AbstractController
          * )
          *
          */
-        $max = $request->query->get('max');
+        $max = $data->max;
 
         /**
          * @SWG\Property(
@@ -68,10 +90,10 @@ class MyRestController extends AbstractController
          *     description="Maximum"
          * )
          */
-        $min = $request->query->get('min');
+        $min = $data->min;
 
         if( $max > $min) {
-            $randomNumber = random_int($request->get('min'), $request->get('max'));
+            $randomNumber = random_int($min, $max);
         } else {
             $randomNumber = 'Du schlawiner du';
         }
@@ -119,12 +141,12 @@ class MyRestController extends AbstractController
             curl_close($curl);*/
 
             $baseurl = $request->getScheme() . '://' . $request->getHttpHost() . $request->getBasePath();
-            $url = $baseurl.$this->generateUrl('my_rest_api').'?min='.$minZahl.'&max='.$maxZahl;
+            $url = $baseurl.$this->generateUrl('my_rest_api')/**.'?min='.$minZahl.'&max='.$maxZahl**/;
 
-            //$url = 'https://enrd300qc4rug.x.pipedream.net';
+            //$url = 'https://enc8fn5j798ak.x.pipedream.net';
 
             $response = $this->client->request(
-                'GET',
+                'POST',
                 $url,
                 ['json' => ['min' => $minZahl, 'max' => $maxZahl]]
             );
