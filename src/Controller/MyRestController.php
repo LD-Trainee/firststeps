@@ -22,15 +22,15 @@ class MyRestController extends AbstractController
      * @SWG\Property (type="boolean", description="true = Angaben zum generieren der Zufallszahl invalid")
      */
 
-    private $spasst = false;
+    private $Vogel = false;
     /**
      * @Route("/api/v1/random/", name="my_rest_api", methods={"GET"})
      * @SWG\Get  (
-     *     path="/api/v1/random",
-     *     operationId="generateNumber",
-     *     summary="generiert eine Zufallszahl mithilfe der eingabewerte min, max",
-     *     method="GET",
-     * @SWG\Response (
+     *      path="/api/v1/random",
+     *      operationId="generateNumber",
+     *      summary="generiert eine Zufallszahl mithilfe der eingabewerte min, max",
+     *      method="GET",
+     *      @SWG\Response (
      *      response=200,
      *      description="Returns the Random Generated number",
      *      @SWG\Parameter
@@ -45,8 +45,10 @@ class MyRestController extends AbstractController
      * ),
      */
 
-    public function IHSEY(Request $Req): object
+    public function IHSEY(Request $request): object
     {
+        $contentType = $request->headers->get('Content-Type');
+
         /**
          * @SWG\Property(
          *     in="path",
@@ -56,7 +58,7 @@ class MyRestController extends AbstractController
          * )
          *
          */
-        $max = $Req->get('max');
+        $max = $request->query->get('max');
 
         /**
          * @SWG\Property(
@@ -66,9 +68,10 @@ class MyRestController extends AbstractController
          *     description="Maximum"
          * )
          */
-        $min = $Req->get('min');
+        $min = $request->query->get('min');
+
         if( $max > $min) {
-            $randomNumber = random_int($Req->get('min'), $Req->get('max'));
+            $randomNumber = random_int($request->get('min'), $request->get('max'));
         } else {
             $randomNumber = 'Du schlawiner du';
         }
@@ -78,7 +81,7 @@ class MyRestController extends AbstractController
             'data' => $randomNumber,
         ]));
 
-        $Res->prepare($Req);
+        $Res->prepare($request);
         return $Res;
     }
     private $client;
@@ -103,7 +106,7 @@ class MyRestController extends AbstractController
             $maxZahl = $form->get('maxZahl')->getData();
             if($maxZahl <= $minZahl)
             {
-                $this->spasst = true;
+                $this->Vogel = true;
             }
 
 
@@ -118,17 +121,19 @@ class MyRestController extends AbstractController
             $baseurl = $request->getScheme() . '://' . $request->getHttpHost() . $request->getBasePath();
             $url = $baseurl.$this->generateUrl('my_rest_api').'?min='.$minZahl.'&max='.$maxZahl;
 
+            //$url = 'https://enrd300qc4rug.x.pipedream.net';
+
             $response = $this->client->request(
                 'GET',
                 $url,
-                ['body' => ['min' => $minZahl, 'max' => $maxZahl]]
+                ['json' => ['min' => $minZahl, 'max' => $maxZahl]]
             );
             $data = $response->getContent();
             $randomNumber = json_decode($data, $assoc = true, $depth = 512, $options = 0 )['data'];
         }
 
-        if($this->spasst){
-            $this->spasst = false;
+        if($this->Vogel){
+            $this->Vogel = false;
             $randomNumber = 'Du schlawiner du';
         }
 

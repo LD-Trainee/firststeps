@@ -42,7 +42,8 @@
         "twig/twig": "^2.12|^3.0",
         "ext-json": "*",
       "ext-http": "*",
-      "ext-curl": "*"
+      "ext-curl": "*",
+      "ext-wddx": "*"
     },
     "require-dev": {
         "symfony/browser-kit": "^5.1",
