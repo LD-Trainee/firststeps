@@ -26,9 +26,6 @@ class MyRestController extends AbstractController
     private $Vogel = false;
         /**
          * @Route("/api/v1/random/", name="my_rest_api", methods={"POST"})
-         *
-         *
-         *
          * @SWG\Response(
          *     response=200,
          *     description="Json mit var data",
@@ -37,7 +34,6 @@ class MyRestController extends AbstractController
          *        example={"data": "42"}
          *     )
          * )
-         *
          * @SWG\Parameter(
          *     name="params",
          *     in="body",

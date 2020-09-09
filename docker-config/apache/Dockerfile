@@ -2,13 +2,8 @@ FROM php:7.3-apache
 
 # Copy VHost-Configuration into Container
 COPY docker-config/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY docker-config/apache/ssl-default.conf /etc/apache2/sites-available/ssl-default.conf
 RUN mv /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini
-
-# create ssl files in image
-RUN mkdir /etc/apache2/ssl
-RUN openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -subj \
-"/C=DE/ST=NRW/L=Dev/O=LionDeer/CN=localhost" \
--keyout /etc/apache2/ssl/ssl.key -out /etc/apache2/ssl/ssl.crt
 
 ENV XDEBUG_CONFIG="idekey=PHPSTORM"
 ENV PHP_IDE_CONFIG="serverName=firststeps"
@@ -49,9 +44,12 @@ RUN docker-php-ext-install opcache
 
 RUN docker-php-ext-enable xdebug
 
-# Enable ModRwrite
+# Enable ModRewrite
 RUN a2enmod rewrite
 RUN a2enmod ssl
+RUN a2ensite ssl-default
 
 RUN curl -sS https://get.symfony.com/cli/installer | bash
 RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
+
+EXPOSE 443

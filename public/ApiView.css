@@ -1,0 +1,103 @@
+.ApiViewBody
+{
+
+    text-align: center;
+    border-style: none;
+}
+
+h1
+{
+    text-align: center;
+    color: cyan;
+    font-size: 55px;
+    text-shadow: 3px 3px 4px black;
+}
+
+body
+{
+    background-image: url(Background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #cccccc;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 10%;
+    border-style: none;
+    width: 50%;
+}
+
+.output{
+    font-size: 55px;
+    color: cyan;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-shadow: 3px 3px 4px black;
+}
+
+.FormClass{
+    background: transparent;
+    border: none;
+}
+
+#nic_api_view_form_input{
+    margin: 2%;
+    background: transparent;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+    font-size: 30px;
+    color: cyan;
+    text-shadow: 3px 3px 4px black;
+}
+
+#nic_api_view_form_NgrokURL{
+    background: transparent;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+    font-size: 30px;
+    color: cyan;
+    text-shadow: 3px 3px 4px black;
+}
+
+#nic_api_view_form_fragsie{
+    background-color: #001b44;
+    color: cyan;
+}
+
+#nic_api_view_form_type_version2_fragSie{
+     background-color: #001b44;
+     color: cyan;
+ }
+
+#nic_api_view_form_type_version2_NgrokURL{
+    background: transparent;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+    font-size: 30px;
+    color: cyan;
+    text-shadow: 3px 3px 4px black;
+}
+
+#nic_api_view_form_type_version2_input{
+    margin: 2%;
+    background: transparent;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+    font-size: 30px;
+    color: cyan;
+    text-shadow: 3px 3px 4px black;
+}
+
+#nic_api_view_form_type_version2_delete{
+    margin: 2%;
+    background: transparent;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+    font-size: 30px;
+    color: cyan;
+    text-shadow: 3px 3px 4px black;
+}
