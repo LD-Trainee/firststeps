@@ -18,7 +18,7 @@ class NicApiViewFormTypeVersion2 extends AbstractType
     {
         $builder
             ->add('NgrokURL', TextType::class, [ 'label' => false])
-            ->add('input', TextType::class, [ 'label' => false])
+            ->add('input', TextType::class, [ 'label' => false, "attr" => [ "class" => "InputTextFeld"]])
             ->add('delete', TextType::class, [ 'label' => false,  'required' => false])
             ->add('fragSie', SubmitType::class)
         ;

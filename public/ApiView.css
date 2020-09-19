@@ -16,7 +16,7 @@ h1
 body
 {
     background-image: url(Background.jpg);
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     background-color: #cccccc;
     text-align: center;
@@ -100,4 +100,8 @@ body
     font-size: 30px;
     color: cyan;
     text-shadow: 3px 3px 4px black;
+}
+
+input:-internal-autofill-selected{
+    background: transparent !important;
 }
