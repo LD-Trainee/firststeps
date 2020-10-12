@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Fritz{% endblock %}
+
+{% block body %}
+    <h1>Edit Fritz</h1>
+
+    {{ include('fritz/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('fritz_index') }}">back to list</a>
+
+    {{ include('fritz/_delete_form.html.twig') }}
+{% endblock %}

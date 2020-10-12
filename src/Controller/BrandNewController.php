@@ -12,15 +12,8 @@ class BrandNewController extends AbstractController
      */
     public function Text()
     {
-        $text = 'hier steht leider nur blödsinn, weil ich meinen neuen Controller testen wollte';
         return $this->render('brand_new/text.html.twig', [
-            'controller_name' => 'BrandNewController',
-            'text' => $text,
+            'controller_name' => 'BrandNewController'
         ]);
     }
-
-    //public function show(string $text)
-    //{
-    //    var_dump($text);
-    //}
 }

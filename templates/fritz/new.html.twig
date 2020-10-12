@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Fritz{% endblock %}
+
+{% block body %}
+    <h1>Create new Fritz</h1>
+
+    {{ include('fritz/_form.html.twig') }}
+
+    <a href="{{ path('fritz_index') }}">back to list</a>
+{% endblock %}

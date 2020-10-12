@@ -9,10 +9,10 @@ use Symfony\Component\HttpFoundation\JsonResponse as Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ZitateApiControllerVersion2 extends AbstractController
+class ZitateApiControllerVersion3 extends AbstractController
 {
     /**
-     * @Route("/api/v2/zitate/{id}", name="api_zitate_id_v2", requirements={"id"="\d+"}, methods={"GET"})
+     * @Route("/api/v3/zitat/{id}", name="api_zitate_id_v3", requirements={"id"="\d+"}, methods={"GET"})
      * @SWG\Response(
      *     response=200,
      *     description="Json mit einem bestimmten Zitaten",
@@ -31,48 +31,40 @@ class ZitateApiControllerVersion2 extends AbstractController
      *        example={"3"}
      *     )
      * )
+     * @param Request $request
+     * @param int $id
+     * @return object
      */
 
-    public function apiGetZitatById(Request $request): object
+    public function apiGetZitatById(Request $request, int $id): object
     {
-
-        $id = $request->get('id');
-        $zitate = $this->setZitate();
-
-
-        if (is_numeric($id)) {
-            /**
-             * Hier Zitat per ID ausgeben
-             */
-
-
-            $test = $zitate[3][1];
-
-            if ($id >= sizeof($zitate)) {
-                $Res = new Response();
-                $Res->setContent(json_encode([
-                    'errorMessage' => 'es sind nur ' . sizeof($zitate) . ' Zitate verfügbar!'
-                ]));
-
-                $Res->prepare($request);
-                return $Res;
-            }
-
+        $em = $this->getDoctrine()->getManager();
+        $zitat = $em->getRepository(Zitat::class)->findOneBy(['id' => $id]);
+        if(empty($zitat)){
             $Res = new Response();
             $Res->setContent(json_encode([
-                'zitatText' => $zitate[$id][0],
-                'zitatAutor' => $zitate[$id][1],
-                'zitatZeit' => $zitate[$id][2]
+                'zitatExists' => 'false'
             ]));
 
             $Res->prepare($request);
             return $Res;
         }
-    }
+
+            $Res = new Response();
+            $Res->setContent(json_encode([
+                'zitatText' => $zitat->getText(),
+                'zitatAutor' => $zitat->getAutor(),
+                'zitatZeit' => $zitat->getTime()
+            ]));
+
+            $Res->prepare($request);
+            return $Res;
+        }
+    //}
 
 
     /**
-     * @Route("/api/v2/zitate/rnd", name="api_zitate_rnd_v2", methods={"GET"})
+     * @Route("/api/v3/zitat/rnd", name="api_zitate_rnd_v3", methods={"GET"})
      * @SWG\Response(
      *     response=200,
      *     description="Json mit random Zitate",
@@ -97,30 +89,34 @@ class ZitateApiControllerVersion2 extends AbstractController
 
     public function apiGetRandomZitat(Request $request): object
     {
-        $data = json_decode($request->getContent());
-        $zitate = $this->setZitate();
+        $em = $this->getDoctrine()->getManager();
+        $zitate = $em->getRepository(Zitat::class)->findAll();
 
-            /**
-             * Heir Random Zitat ausgeben
-             */
+        if(!empty($zitate)){
+            $n = random_int(0, sizeof($zitate) - 1);
 
-            $id = random_int(0, sizeof($zitate)-1);
-
-            $Res =new Response();
+            $Res = new Response();
             $Res->setContent(json_encode([
-                'zitatText' => $zitate[$id][0],
-                'zitatAutor' => $zitate[$id][1],
-                'zitatZeit' => $zitate[$id][2]
+                'zitatText' => $zitate[$n]->getText(),
+                'zitatAutor' => $zitate[$n]->getAutor(),
+                'zitatZeit' => $zitate[$n]->getTime(),
+                'zitatId' => $zitate[$n]->getId()
             ]));
 
-            $Res->prepare($request);
-            return $Res;
 
+        } else {
+            $Res = new Response();
+            $Res->setContent(json_encode([
+                'zitatExists' => 'false'
+            ]));
+        }
+        $Res->prepare($request);
+        return $Res;
 
     }
 
     /**
-     * @Route("/api/v2/zitate/", name="api_zitate_all_v2", methods={"GET"})
+     * @Route("/api/v3/zitat/", name="api_zitate_all_v3", methods={"GET"})
      * @SWG\Response(
      *     response=200,
      *     description="Json mit allen Zitaten",
@@ -143,31 +139,36 @@ class ZitateApiControllerVersion2 extends AbstractController
 
     public function apiGetAlleZitate(Request $request): object
     {
-        $data = json_decode($request->getContent());
-        $zitate = $this->setZitate();
+        $em = $this->getDoctrine()->getManager();
+        $zitate = $em->getRepository(Zitat::class)->findAll();
+        if(empty($zitate)){
+            $zitate[0] = new Zitat();
+            $zitate[0]->setText('Keine');
+            $zitate[0]->setAutor('Zitate');
+            $zitate[0]->setTime('gefunden!');
+        }
 
-        $a = sizeof($zitate) / 3;
         $counter1 = 0;
         $counter2 = 0;
         while($counter1!=sizeof($zitate)) {
-            while ($counter2 != 3) {
+            while ($counter2 != 4) {
                 if ($counter2 == 0){
-                    $zitateAusgabe[$counter1]['Zitattext'] = $zitate[$counter1][0];
+                    $zitateAusgabe[$counter1]['Zitattext'] = $zitate[$counter1]->getText();
                 }
                 if ($counter2 == 1){
-                    $zitateAusgabe[$counter1]['Zitatautor'] = $zitate[$counter1][1];
+                    $zitateAusgabe[$counter1]['Zitatautor'] = $zitate[$counter1]->getAutor();
                 }
                 if ($counter2 == 2){
-                    $zitateAusgabe[$counter1]['Zitatzeit'] = $zitate[$counter1][2];
+                    $zitateAusgabe[$counter1]['Zitatzeit'] = $zitate[$counter1]->getTime();
+                }
+                if ($counter2 == 3){
+                    $zitateAusgabe[$counter1]['Zitatid'] = $zitate[$counter1]->getId();
                 }
                 $counter2++;
             }
             $counter1++;
             $counter2 = 0;
         }
-
-
-
 
             $Res =new Response();
             $Res->setContent(json_encode($zitateAusgabe));
@@ -179,7 +180,7 @@ class ZitateApiControllerVersion2 extends AbstractController
     }
 
     /**
-     * @Route("/api/v2/zitate/", name="api_zitate_put_v2", methods={"POST"})
+     * @Route("/api/v3/zitat/", name="api_zitate_put_v3", requirements={"id"="\d+"}, methods={"POST"})
      * @SWG\Response(
      *     response=200,
      *     description="gibt ok bei erfolg, wer hätts gedacht, und dann auch noch die id vom neuen Zitat!",
@@ -203,11 +204,8 @@ class ZitateApiControllerVersion2 extends AbstractController
 
     public function apiPutZitat(Request $request)
     {
-        $zitate = $this->setZitate();
         $data = json_decode($request->getContent());
         $newZitat = $data->zitat;
-
-        $newZitatId = sizeof($zitate);
 
         $testZitatSyntax = explode('#', $newZitat);
         if(sizeof($testZitatSyntax)!='3'){
@@ -220,41 +218,38 @@ class ZitateApiControllerVersion2 extends AbstractController
             $Res->prepare($request);
             return $Res;
         }
-        $textString = null;
-        $counter1 = 0;
-        while($counter1!==sizeof($zitate)){
-            if($textString===null) {
-                $textString = $textString . implode($zitate[$counter1], "#");
-            } else {
-                $textString = $textString . "#" . implode($zitate[$counter1], "#");
-            }
-            $counter1++;
-        }
-        $textString = $textString . '#' . $newZitat;
 
-        file_put_contents("Zitate_v2.txt", $textString);
+        $zitat = new Zitat();
+        $new = explode("#", $newZitat);
+        $zitat->setText($new[0])->setAutor($new[1])->setTime($new[2]);
+
+        $em = $this->getDoctrine()->getManager();
+        $zitate = $em->getRepository(Zitat::class)->findAll();
+        if(empty($zitate)){
+            $zitat->setId(1);
+            $metadata = $em->getClassMetaData(get_class($zitat));
+            $metadata->setIdGeneratorType(\Doctrine\ORM\Mapping\ClassMetadata::GENERATOR_TYPE_NONE);
+            $connection = $em->getConnection();
+            $connection->exec("ALTER TABLE zitat AUTO_INCREMENT = 1;");
+        }
+
+
+        $em->persist($zitat);
+        $em->flush(); /////////////////////////////////////////////// write to database
 
         $Res =new Response();
         $Res->setContent(json_encode([
             'success' => 'true',
-            'id' => $newZitatId
+            'id' => $zitat->getId()
         ]));
 
-
-        $zitat = new Zitat();
-        /**$new = explode("#", $newZitat);
-        $zitat->setText($new[0])->setAutor($new[1])->setTime($new[2]);
-
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($zitat);
-        $em->flush(); /////////////////////////////////////////////// write to database**/
         $Res->prepare($request);
         return $Res;
     }
 
 
     /**
-     * @Route("/api/v2/zitate/{id}", name="api_zitate_delete_v2", requirements={"id"="\d+"}, methods={"DELETE"})
+     * @Route("/api/v3/zitat/{id}", name="api_zitate_delete_v3", requirements={"id"="\d+"}, methods={"DELETE"})
      * @SWG\Response(
      *     response=200,
      *     description="gibt ok bei erfolg, wer hätts gedacht!",
@@ -277,21 +272,19 @@ class ZitateApiControllerVersion2 extends AbstractController
 
     public function apiDeleteZitatById(Request $request, $id)
     {
-        $zitate = $this->setZitate();
+        $em = $this->getDoctrine()->getManager();
+        $zitat = $this->getDoctrine()->getRepository(Zitat::class)->findOneBy(['id' => $id]);
+        if(empty($zitat)){
+            $Res =new Response();
+            $Res->setContent(json_encode([
+                'success' => 'false'
+            ]));
 
-        array_splice($zitate, $id, 1);
-
-        $textString = null;
-        $counter1 = 0;
-        while($counter1!==sizeof($zitate)){
-            if($textString===null) {
-                $textString = $textString . implode($zitate[$counter1], "#");
-            } else {
-                $textString = $textString . "#" . implode($zitate[$counter1], "#");
-            }
-            $counter1++;
+            $Res->prepare($request);
+            return $Res;
         }
-        file_put_contents("Zitate_v2.txt", $textString);
+        $em->remove($zitat);
+        $em->flush(); /////////////////////////////////////////////// write to database
 
         $Res =new Response();
         $Res->setContent(json_encode([
@@ -304,7 +297,7 @@ class ZitateApiControllerVersion2 extends AbstractController
     }
 
     /**
-     * @Route("/api/v2/zitate/help", name="api_zitate_help_v2",  methods={"GET"})
+     * @Route("/api/v3/zitat/help", name="api_zitate_help_v3",  methods={"GET"})
      * @SWG\Response(
      *     response=200,
      *     description="gibt Hilfestellung für den User",
@@ -319,50 +312,11 @@ class ZitateApiControllerVersion2 extends AbstractController
     {
         $Res =new Response();
         $Res->setContent(json_encode([
-            'help' => 'Geben Sie eine Zitat ID ( z.B. 3) oder all oder rnd oder del oder put in das mittlere Feld ein'
+            'help' => 'Geben Sie eine Zitat ID ( z.B. 3) oder all oder rnd oder del oder add in das mittlere Feld ein, die unteren Felder sind für die Parameter zu del und add.'
         ]));
 
         $Res->prepare($request);
         return $Res;
 
-    }
-
-    public function setZitate()
-    {
-        $zitate = [
-            "0" => ["Energie", "Captain John Luc Picard", "Sternzeit 4-1-420"],
-            "1" => ["Was ist das? Ein blaues Licht. Was macht es? Es leuchtet blau.", "Rambo 3", "14. Juli 1988"],
-            "2" => ["Bier ist geil!", "Johann Wolfgang von Goethe", "28. August 1749 bis 22. März 1832"],
-            "3" => ["Du bist zu leib für diese Welt", "Meine süße Ex", "14.02.2020"],
-            "4" => ["Tag Herr Braunschweig", "Noob & Nerd WG", "10. Januar 2013"],
-            "5" => ["Anders ist besser!", "Tele 5", "seit dem ich denken kann"],
-            "6" => ["Dumm ist nur wer dummes tut", "Forest Gump", "13. Oktober 1994"],
-            "7" => ["manus manum lavat", "Epicharmos", "* um 540 v. Chr.; † um 460 v. Chr."],
-
-        ];
-
-        $zitateA = file_get_contents ( 'Zitate_v2.txt' );
-
-        $zitateFetzen = explode('#', $zitateA);
-        $counter1=0;
-        $counter2=0;
-        $cc=0;
-        $countZitate = sizeof($zitateFetzen);
-        while($counter1!==$countZitate){
-            while($counter2!==3){
-                $zitateFinal[$cc][$counter2] = $zitateFetzen[$counter1 + $counter2];
-                $counter2++;
-            }
-            $counter1 = $counter1+3;
-            $cc++;
-            $counter2 = 0;
-        }
-
-
-
-        $zitate = $zitateFinal;
-
-
-        return $zitate;
     }
 }

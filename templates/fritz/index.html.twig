@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fritz index{% endblock %}
+
+{% block body %}
+    <h1>Fritz index</h1>
+    {{ form(form) }}
+    <a href="{{ path('fritz_new') }}">Create new</a>
+{% endblock %}

@@ -109,6 +109,9 @@
     "php": {
         "version": "7.3"
     },
+    "phpcurl/curlwrapper": {
+        "version": "3.0.0"
+    },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
     },

@@ -33,7 +33,7 @@ class NicApiViewVersion2
     private $NgrokURL;
 
     /**
-     * @ORM\Column(type="number", length=10)
+     * @ORM\Column(type="integer", length=10)
      */
     private $delete;
 

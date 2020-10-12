@@ -12,3 +12,10 @@ services:
     ports:
       - "80:80"
       - "443:443"
+  mysql-development:
+    image: mysql:8.0.17
+    environment:
+      MYSQL_ROOT_PASSWORD: password2
+      MYSQL_DATABASE: zitate
+    ports:
+      - "3308:3306"

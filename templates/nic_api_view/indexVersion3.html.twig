@@ -1,0 +1,42 @@
+
+<html>
+<head>
+    <link href="{{ asset('./ApiView.css') }}" rel="stylesheet"/>
+</head>
+</html>
+{% block title %}{% endblock %}
+
+
+{% block body %}
+    <div class="ApiViewBody">
+        <h1>Sprich diese Api mal an, villeicht gibt sie dir ja ihre Nummer ;)</h1>
+        <br/>
+        <div class="FormClass">
+        {{ form(form) }}
+        </div>
+        {% set gg = 0 %}
+        <div class="output">
+            {% if output == "true" %}
+                Zitat gelöscht!
+            {% endif %}
+            {% if output == "false" %}
+                Zitat nicht gelöscht, kein Zitat mit dieser Id!
+            {% endif %}
+            {% if output == "successAdd" %}
+                Zitat hinzugefügt!
+            {% endif %}
+            {% if output == "noSuchId" %}
+                Ein Zitat mit dieser Id existiert nicht!
+            {% endif %}
+            {% for i in output%}
+                {{ i }}
+                <br />
+                {% set gg = gg + 1 %}
+                {% if gg == 4 %}
+                    {% set gg = 0 %}
+                    <br />
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
