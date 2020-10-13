@@ -1,0 +1,17 @@
+#test2{
+    padding: 5px;
+    position: fixed;
+}
+#divHeaders{
+    height: 10%;
+    border-style: solid;
+    min-height: 10%;
+    display: block;
+    position: absolute;
+    width: 100%;
+}
+
+#buttonA{
+    margin: 3%;
+    margin-top: 20%;
+}

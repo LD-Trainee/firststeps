@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\HundEntityRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\ManyToOne;
 
 /**
  * @ORM\Entity(repositoryClass=HundEntityRepository::class)
@@ -31,6 +32,12 @@ class HundEntity
      * @ORM\Column(type="integer")
      */
     private $age;
+
+    /**
+     * @ORM\Column(type="integer")
+     * @ManyToOne(targetEntity="HerrchenEntity")
+     */
+    private $herrchen;
 
     public function getId(): ?int
     {
@@ -69,6 +76,18 @@ class HundEntity
     public function setAge(int $age): self
     {
         $this->age = $age;
+
+        return $this;
+    }
+
+    public function getHerrchen(): ?int
+    {
+        return $this->herrchen;
+    }
+
+    public function setHerrchen(int $herrchen): self
+    {
+        $this->herrchen = $herrchen;
 
         return $this;
     }

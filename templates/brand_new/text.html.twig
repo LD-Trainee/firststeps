@@ -1,7 +1,19 @@
 {% extends 'base.html.twig' %}
 
+{% block javascripts %}{{ encore_entry_script_tags('brandnew') }}{% endblock %}
+
 {# templates/lucky/number.html.twig #}
 {% block body %}
-    <h1>{{ text }}</h1>
+    <div id="divHeaders">
+        <button id="test2">button</button>
+        <h1 id="test">LOL er hat ROFL gesagt</h1>
+
+    </div>
+    <button id="buttonA">buttonA</button>
+    <h2 id="in">A</h2>
+    <div id="divTest">
+        A
+    </div>
+
 {% endblock %}
 

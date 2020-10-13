@@ -99,8 +99,6 @@ class LeonApiViewControllerVersion3 extends AbstractController
                 }
                 $url = $baseurl.'api/v3/zitat/help/';
 
-                //$url = 'https://enc8fn5j798ak.x.pipedream.net';
-
                 $response = $this->client->request(
                     'GET',
                     $url,
