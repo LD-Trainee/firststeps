@@ -4,16 +4,42 @@
 
 {# templates/lucky/number.html.twig #}
 {% block body %}
+
+    <div id="progressbar1" role="progressbar"  class="mdc-linear-progress" aria-label="Example Progress Bar" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0">
+        <div class="mdc-linear-progress__buffer">
+            <div class="mdc-linear-progress__buffer-bar"></div>
+            <div class="mdc-linear-progress__buffer-dots"></div>
+        </div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+            <span class="mdc-linear-progress__bar-inner"></span>
+        </div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+            <span class="mdc-linear-progress__bar-inner"></span>
+        </div>
+    </div>
+
     <div id="divHeaders">
-        <button id="test2">button</button>
+        <button id="test2" class="mdc-button--raised"><span class="mdc-button__label">button</span></button>
         <h1 id="test">LOL er hat ROFL gesagt</h1>
 
     </div>
-    <button id="buttonA">buttonA</button>
+    <button id="buttonA" class="mdc-button--raised">buttonA</button>
     <h2 id="in">A</h2>
     <div id="divTest">
         A
     </div>
+    <p id="eins">was</p>
+    <button class="mdc-button mdc-button--outlined">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Outlined Button</span>
+    </button>
+
+    <label class="mdc-text-field mdc-text-field--filled">
+        <span class="mdc-text-field__ripple"></span>
+        <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+        <span class="mdc-floating-label" id="my-label-id"></span>
+        <span class="mdc-line-ripple"></span>
+    </label>
 
 {% endblock %}
 

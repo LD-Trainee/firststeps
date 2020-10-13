@@ -12,6 +12,8 @@ import './styles/Rechner.css';
 import './js/BrandNew.js'
 import './styles/BrandNew.css';
 
+
+
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 
 import $ from 'jquery';

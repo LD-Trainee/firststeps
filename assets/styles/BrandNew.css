@@ -1,6 +1,7 @@
 #test2{
     padding: 5px;
     position: fixed;
+    border-radius: 4px;
 }
 #divHeaders{
     height: 10%;
@@ -12,6 +13,17 @@
 }
 
 #buttonA{
+    border-radius: 4px;
     margin: 3%;
     margin-top: 20%;
+
+}
+
+.B{
+    color: #e7040f;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input
+{
+    font-size: 110%;
 }

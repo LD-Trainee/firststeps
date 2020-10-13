@@ -120,7 +120,7 @@ class LeonApiViewControllerVersion3 extends AbstractController
             if($input=='all'){                            //            all, rnd, byId action
                 $inputA = 'api/v3/zitat';
             } elseif($input=='rnd') {
-                $inputA = 'api/v3/zitat/rnd';
+                $inputA = 'api/v3/zitat/rnd';  // lololololololololololololololol
             } elseif (is_numeric($input)){
                 $inputA = 'api/v3/zitat/'.$input;
             } else {
