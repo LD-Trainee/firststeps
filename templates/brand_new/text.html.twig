@@ -34,10 +34,16 @@
         <span class="mdc-button__label">Outlined Button</span>
     </button>
 
-    <label class="mdc-text-field mdc-text-field--filled">
+    <label class="mdc-text-field mdc-text-field--filled username" data-mdc-auto-init="MDCTextField">
         <span class="mdc-text-field__ripple"></span>
-        <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
-        <span class="mdc-floating-label" id="my-label-id"></span>
+        <input type="text" class="mdc-text-field__input" aria-labelledby="username-label" name="username" required>
+        <span class="mdc-floating-label" id="username-label">Username</span>
+        <span class="mdc-line-ripple"></span>
+    </label>
+    <label class="mdc-text-field mdc-text-field--filled password"data-mdc-auto-init="MDCTextField">
+        <span class="mdc-text-field__ripple"></span>
+        <input type="password" class="mdc-text-field__input" aria-labelledby="password-label" name="password" required minlength="8">
+        <span class="mdc-floating-label" id="password-label">Password</span>
         <span class="mdc-line-ripple"></span>
     </label>
 

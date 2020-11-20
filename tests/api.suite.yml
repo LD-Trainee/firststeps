@@ -1,0 +1,10 @@
+actor: ApiTester
+modules:
+    enabled:
+        - REST:
+              url: https://230a8cced719.ngrok.io/api/v3/
+              #url: https://postb.in/1603117991105-1462505809031
+              depends: PhpBrowser
+              part: Json
+              cleanup: false
+        - Asserts:

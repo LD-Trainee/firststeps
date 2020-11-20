@@ -1,5 +1,10 @@
 
 
+import {MDCTextField} from '@material/textfield';
+
+const username = new MDCTextField(document.querySelector('.username'));
+const password = new MDCTextField(document.querySelector('.password'));
+
 const $ = require('jquery');
 
 let a;
@@ -27,6 +32,7 @@ function A(){
 
     };
     xhttp.open("GET", "http://localhost/text.txt", true);
+
     xhttp.send();
 
 }

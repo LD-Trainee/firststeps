@@ -205,6 +205,16 @@ class ZitateApiControllerVersion3 extends AbstractController
     public function apiPutZitat(Request $request)
     {
         $data = json_decode($request->getContent());
+        if(empty($data)){
+            $Res =new Response();
+            $Res->setContent(json_encode([
+                'success' => 'false',
+                'errorMessage' => 'keine json Zitatdefinition im body vorhanden'
+            ]));
+
+            $Res->prepare($request);
+            return $Res;
+        }
         $newZitat = $data->zitat;
 
         $testZitatSyntax = explode('#', $newZitat);

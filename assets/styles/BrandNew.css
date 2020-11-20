@@ -1,3 +1,5 @@
+
+
 #test2{
     padding: 5px;
     position: fixed;
@@ -26,4 +28,12 @@
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input
 {
     font-size: 110%;
+}
+
+
+.username,
+.password {
+    display: flex;
+    margin: 20px auto;
+    width: 300px;
 }

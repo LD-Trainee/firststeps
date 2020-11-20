@@ -1,0 +1,6 @@
+actor: LOL
+modules:
+  enabled:
+    - PhpBrowser:
+        url: https://230a8cced719.ngrok.io
+    - \Helper\Acceptance
