@@ -19,87 +19,14 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1648492-a18c-48f2-aba0-92c19a00b08c" name="Default Changelist" comment="neues zeug in der beispielseite">
-      <change afterPath="$PROJECT_DIR$/codeception.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201016131529.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Final.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/testtesttest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/DeliciousPizzaController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/FritzController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/FritzboxAHA.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SodokuGenController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/StefanAufgabeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/TornApiV1Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/VinTestController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ZuTesten.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/DeliciousPizzaEntity.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Fritz.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/TornApiV1Entity.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/DeliciousPizzaFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/FritzType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/TornApiV1FormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/DeliciousPizzaEntityRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/FritzRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/TornApiV1EntityRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/delicious_pizza/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/sodoku_gen/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/stefan_aufgabe/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/torn_api_v1/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/vin_test/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controller/ZuTestenTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/_data/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/_output/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/_support/AcceptanceTester.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/_support/ApiTester.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/_support/FunctionalTester.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/_support/Helper/Acceptance.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/_support/Helper/Api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/_support/Helper/Functional.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/_support/Helper/Unit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/_support/UnitTester.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/_support/_generated/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/acceptance.suite.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/acceptance/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/acceptance/DoTestCest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/acceptance/FirstCest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/acceptance/suite.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/api.suite.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/api/CreateUserCest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/api/api.suite.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/functional.suite.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/functional/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit.suite.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/firststeps.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/firststeps.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/BrandNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/BrandNew.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/BrandNew.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/BrandNew.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ZitateApiControllerVersion3.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ZitateApiControllerVersion3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/brand_new/text.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/brand_new/text.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fritz/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fritz/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="a1648492-a18c-48f2-aba0-92c19a00b08c" name="Default Changelist" comment="stand 20.11.2020">
+      <change beforePath="$PROJECT_DIR$/src/Controller/StefanAufgabeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/StefanAufgabeController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,19 +289,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp_old\htdocs\firststeps\src\Entity" />
-      <recent name="C:\xampp_old\htdocs\firststeps\templates\nic_api_view" />
-      <recent name="C:\xampp_old\htdocs\firststeps\src\Controller" />
-      <recent name="C:\xampp\htdocs\firststeps\src\Form" />
-      <recent name="C:\xampp\htdocs\firststeps\src\Entity" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp_old\htdocs\firststeps\tests\Controller" />
       <recent name="C:\xampp_old\htdocs\firststeps\assets\js" />
       <recent name="C:\xampp_old\htdocs\firststeps\assets" />
       <recent name="C:\xampp_old\htdocs\firststeps\assets\styles" />
       <recent name="C:\xampp\htdocs\firststeps\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp_old\htdocs\firststeps\src\Entity" />
+      <recent name="C:\xampp_old\htdocs\firststeps\templates\nic_api_view" />
+      <recent name="C:\xampp_old\htdocs\firststeps\src\Controller" />
+      <recent name="C:\xampp\htdocs\firststeps\src\Form" />
+      <recent name="C:\xampp\htdocs\firststeps\src\Entity" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml.dist">
@@ -471,7 +398,7 @@
       <workItem from="1605511719120" duration="662000" />
       <workItem from="1605730746626" duration="780000" />
       <workItem from="1605764869106" duration="9016000" />
-      <workItem from="1605867463980" duration="13596000" />
+      <workItem from="1605867463980" duration="14321000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1596726184467</created>
@@ -599,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602598091466</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="stand 20.11.2020">
+      <created>1605881774554</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1605881774554</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +550,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -663,7 +597,8 @@
     <MESSAGE value="update auf leon api, leon api view V3" />
     <MESSAGE value="installed encore, jquery&#10;used both in brand/new" />
     <MESSAGE value="neues zeug in der beispielseite" />
-    <option name="LAST_COMMIT_MESSAGE" value="neues zeug in der beispielseite" />
+    <MESSAGE value="stand 20.11.2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="stand 20.11.2020" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3172" y="211" key="#CLI_Interpreters" timestamp="1602848518979">
@@ -893,8 +828,8 @@
     <state x="406" y="250" key="SettingsEditor/0.1440.1536.824/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1598530936682" />
     <state x="2966" y="250" key="SettingsEditor/0.1440.1536.824/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1599632531471" />
     <state x="2967" y="155" key="SettingsEditor/5120.353.1536.824/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1605872028776" />
-    <state x="2498" y="-320" key="Vcs.Push.Dialog.v2" timestamp="1602598095160">
-      <screen x="1920" y="-590" width="1920" height="1040" />
+    <state x="3177" y="289" key="Vcs.Push.Dialog.v2" timestamp="1605881809917">
+      <screen x="2560" y="0" width="2048" height="1112" />
     </state>
     <state x="617" y="289" key="Vcs.Push.Dialog.v2/-860.1440.1536.824/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1602504354694" />
     <state x="2498" y="-320" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.-590.1920.1040@1920.-590.1920.1040" timestamp="1602598095160" />
@@ -903,6 +838,11 @@
     <state x="3177" y="289" key="Vcs.Push.Dialog.v2/0.1440.1536.824/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1598624910181" />
     <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.1440.1536.824/2560.-14.2048.1112/0.0.2048.1112@0.0.2048.1112" timestamp="1598509470010" />
     <state x="3177" y="275" key="Vcs.Push.Dialog.v2/0.1440.1536.824/2560.-14.2048.1112/0.0.2048.1112@2560.-14.2048.1112" timestamp="1598425347331" />
+    <state x="3177" y="289" key="Vcs.Push.Dialog.v2/5120.353.1536.824/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1605881809917" />
+    <state x="3325" y="290" key="VcsDiffUtil.ChangesDialog" timestamp="1605881835073">
+      <screen x="2560" y="0" width="2048" height="1112" />
+    </state>
+    <state x="3325" y="290" key="VcsDiffUtil.ChangesDialog/5120.353.1536.824/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1605881835073" />
     <state x="2653" y="93" width="1862" height="926" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605776611173">
       <screen x="2560" y="0" width="2048" height="1112" />
     </state>

@@ -18,7 +18,7 @@ class StefanAufgabeController extends AbstractController
     private $seperator;
     public function __construct(HttpClientInterface $client){
 
-        $this->token = 'Bearer EqDRIfh1AKsFY8gvppYslg1Js1tYplcpyvH0c0svzfoLf3WA6RlgTBb6uvGRcwTRrWKACpAL9iLcaR5OIAlz6M9jFoG94wIIUNUBJUIBSO8=&_z_A0V5ayCT-hUTe1PPR0h3SrYprhlOnuZtTKZnFbO6z5_cc4bXy778pqxAcF44XONPpTzGUd2TdkJVVRcvHNSrfYk6LFgJh';
+
 
 //        $this->client = new ScopingHttpClient($client, [
 //            'https://ferronordic.d-velop.cloud/' => [
